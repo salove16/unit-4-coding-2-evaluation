@@ -1,12 +1,12 @@
 const express=require("express")
 
-const User=require("../models/userModel")
+const SavingAccount=require("../models/savingAccountModel")
 
 const router=express=express.Router()
 
 router.get("/",async(req,res)=>{
     try {
-        const user=await find().lean().exce()
+        const USer=await find().lean().exce()
 return res.status(200).send(user)
 
     } catch (err) {

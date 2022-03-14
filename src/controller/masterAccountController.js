@@ -3,9 +3,19 @@ const app = require("..")
 
 const MasterAccount=require("../models/masterAccountModel")
 
-const router=express=express.Router()
+const router=express.Router()
 
 router.get("/",async(req,res)=>{
-    const 
+    try {
+        const MasterAccount=await find().populate("userId").lean().exce()
+return res.status(200).send(MasterAccount)
+
+    } catch (err) {
+        console.log(err)
+    }
 })
+
+
+
+module.exports=router
 
